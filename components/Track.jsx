@@ -1,6 +1,6 @@
-
+'use client'
 import Image from "next/image";
-import Icons  from "@/components/Icons";
+import {Icons}  from "@/components/Icons";
 import { useCallback } from "react";
 
 const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
@@ -22,9 +22,7 @@ const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
     if (isRemoval) {
       return (
         <button
-          onClick={() => {
-            removeTrack();
-          }}
+          onClick={() => {removeTrack()}}
           className="p-1 bg-slate-200 rounded-lg"
         >
           <Icons.remove />
@@ -33,9 +31,7 @@ const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
     }
     return (
       <button
-        onClick={() => {
-          addTrack();
-        }}
+        onClick={() => {addTrack()}}
         className="p-1 bg-slate-200 rounded-lg"
       >
         <Icons.add />
@@ -64,9 +60,6 @@ const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
                 </h3>
               </div>
               <button
-                onClick={() => {
-                  addTrack();
-                }}
                 className="mr-3 p-1 bg-slate-200 rounded-lg"
               >
                 {renderAction()}

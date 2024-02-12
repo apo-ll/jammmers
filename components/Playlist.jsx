@@ -1,6 +1,6 @@
 
 
-import TrackList from "./TrackList";
+import TrackList from "@/components/TrackList";
 import { useCallback } from "react";
 
 const Playlist = ({ onRemove, playlistTracks, onNameChange }) => {

@@ -1,5 +1,5 @@
 
-import Icons  from "@/components/Icons";
+import {Icons}  from "@/components/Icons";
 import { useState, useCallback } from "react";
 
  const SearchBar = ({ onSearch }) => {

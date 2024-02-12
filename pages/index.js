@@ -3,7 +3,7 @@ import Footers from "@/components/Footers";
 import NavBar from "@/components/NavBar";
 import Playlist from "@/components/Playlist";
 import SearchResults from "@/components/SearchResults";
-import Spotify from "@/lib/spotify";
+import Spotify from "@/lib/Spotify";
 
 
 import { useCallback, useState } from "react";

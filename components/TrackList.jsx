@@ -1,4 +1,4 @@
-import Track from "@/components/Track"
+import Track from "./Track"
 
 const TrackList = ({ tracks, onAdd, isRemoval, onRemove }) => {
   return (
