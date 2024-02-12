@@ -2,7 +2,7 @@
 
 
 import TrackList from "@/components/TrackList";
-import { SearchBar } from "@/components/SearchBar";
+import  SearchBar from "@/components/SearchBar";
 
 const SearchResults = ({ searchResults, onAdd, onSearcher }) => {
   return (
