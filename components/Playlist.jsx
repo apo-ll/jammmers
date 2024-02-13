@@ -21,7 +21,7 @@ const Playlist = ({ onRemove, playlistTracks, onNameChange }) => {
             <input
               type="text"
               id="simple-search"
-              className="bg-slate-200 lg:w-[480px]  text-gray-900  lg:rounded-xl rounded-xl placeholder:text-indigo-800 placeholder:text-base placeholder:font-normal font-['Be Vietnam Pro'] placeholder:leading-normal focus:outline-none focus:ring focus:border-blue-500 block w-full p-4 "
+              className="bg-slate-200 lg:w-[480px]  text-gray-900  lg:rounded-xl rounded-3xl placeholder:text-indigo-800 placeholder:text-base placeholder:font-normal font-['Be Vietnam Pro'] placeholder:leading-normal focus:outline-none focus:ring focus:border-blue-500 block w-full p-4 "
               placeholder="Enter playlist name"
               onChange={handleNameChange}
             />
