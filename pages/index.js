@@ -1,4 +1,3 @@
-import Footers from "@/components/Footers";
 import NavBar from "@/components/NavBar";
 import Playlist from "@/components/Playlist";
 import SearchResults from "@/components/SearchResults";
@@ -63,7 +62,7 @@ export default function Home() {
         onRemove={removeTrack}
         onNameChange={updatePlaylistName}
       />
-      <Footers />
+      
     </main>
   );
 }
