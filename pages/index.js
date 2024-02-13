@@ -4,6 +4,13 @@ import Playlist from "@/components/Playlist";
 import SearchResults from "@/components/SearchResults";
 import Spotify from "@/lib/Spotify";
 
+import {Nunito_Sans} from "next/font/google";
+
+const nunito = Nunito_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+})
+
 import { useCallback, useState } from "react";
 
 export default function Home() {
@@ -44,7 +51,7 @@ export default function Home() {
   }, [playlistName, playlistTracks]);
 
   return (
-    <main>
+    <main className={nunito.className}>
       <NavBar savePlaylist={savePlaylist} />
       <SearchResults
         searchResults={searchResults}

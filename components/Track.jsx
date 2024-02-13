@@ -1,7 +1,9 @@
-"use client";
+
 import Image from "next/image";
 import { Icons } from "@/components/Icons";
 import { useCallback } from "react";
+import { toast } from 'sonner'
+
 
 const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
   const addTrack = useCallback(
@@ -21,30 +23,21 @@ const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
   const renderAction = () => {
     if (isRemoval) {
       return (
-        <button
-          onClick={() => {
-            removeTrack();
-          }}
-          className="p-1 bg-slate-200 rounded-lg"
-        >
-          <Icons.remove />
+        <button className="p-1 h-full"   onClick={() => {removeTrack(); toast.success(`${tracks.name} by ${tracks.artist} has been removed from playlist`)}}>
+          <Icons.delete />
         </button>
-      );
+      )
     }
     return (
-      <button
-        onClick={() => {
-          addTrack();
-        }}
-        className="p-1 bg-slate-200 rounded-lg"
-      >
-        <Icons.add />
+      <button className="p-1 h-full"  onClick={() => {addTrack(); toast.success(`${tracks.name} by ${tracks.artist} has been added to playlist`)}} >
+        
+        <Icons.add/>
       </button>
-    );
-  };
+    )
+  }
 
   return (
-    <div className="space-y-3 items-center">
+    <div className="space-y-3 bg-slate-200 lg:w-[223px]  rounded-xl items-center">
       <Image
         width={223}
         height={223}
@@ -52,7 +45,7 @@ const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
         alt={`Album image of ${tracks.artist}`}
         className="rounded-xl"
       />
-      <div className="pb-3 ">
+      <div className="pb-3 items-center">
         <div className="flex justify-between  px-2">
           <div>
             <h2 className="self-stretch text-neutral-900 text-base font-medium leading-normal">
@@ -62,9 +55,9 @@ const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
               {tracks.artist}
             </h3>
           </div>
-          <button className="mr-3 p-1 bg-slate-200 rounded-lg">
+          <div className="  bg-white  rounded-lg">
             {renderAction()}
-          </button>
+          </div>
         </div>
       </div>
     </div>
@@ -72,3 +65,6 @@ const Track = ({ tracks, onAdd, onRemove, isRemoval }) => {
 };
 
 export default Track;
+
+
+// className="p-1 bg-slate-200 rounded-lg"
