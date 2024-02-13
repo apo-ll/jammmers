@@ -1,8 +1,7 @@
-import { Icons } from "./icons";
 import SearchBar from "./SearchBar";
 import TrackList from "./TrackList";
 
-export const SearchResults = ({ searchResults, onAdd, onSearch }) => {
+const SearchResults = ({ searchResults, onAdd, onSearch }) => {
   return (
     <div className="lg:px-40 px-4 py-5 justify-center w-full inline-flex">
       <div className="max-w-[960px] w-full">
@@ -19,3 +18,5 @@ export const SearchResults = ({ searchResults, onAdd, onSearch }) => {
     </div>
   );
 };
+
+export default SearchResults;
