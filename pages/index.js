@@ -4,9 +4,9 @@ import Playlist from "@/components/Playlist";
 import SearchResults from "@/components/SearchResults";
 import Spotify from "@/lib/Spotify";
 
-import {Poppins} from "next/font/google";
+import {Nunito} from "next/font/google";
 
-const nunito = Poppins({
+const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',
 })

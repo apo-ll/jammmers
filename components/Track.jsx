@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import { Icons } from "@/components/Icons";
 import { useCallback } from "react";
