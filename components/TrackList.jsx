@@ -1,4 +1,4 @@
-import Track from "./Track"
+import Track from "./Track";
 
 const TrackList = ({ tracks, onAdd, isRemoval, onRemove }) => {
   return (
@@ -13,7 +13,7 @@ const TrackList = ({ tracks, onAdd, isRemoval, onRemove }) => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default TrackList
+export default TrackList;
